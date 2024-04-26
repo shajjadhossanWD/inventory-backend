@@ -8,7 +8,7 @@ import { InventoryModule } from './inventory/inventory.module';
 @Module({
   imports: [
     InventoryItem,
-    MongooseModule.forRoot('mongodb+srv://shajjadhossan111:Xo6GzHrfg7XDXvdN@cluster0.4fogulp.mongodb.net/inventory'),
+    MongooseModule.forRoot(process.env.DATABASE_URL),
     InventoryModule
   ],
   controllers: [AppController],
